@@ -1,0 +1,8 @@
+- name: install_chocolatey
+  hosts: windows
+  tasks: 
+  - name: downgrade chocolatey
+    win_chocolatey:
+      name: "chocolatey"
+      state: downgrade
+      version: 0.10.11

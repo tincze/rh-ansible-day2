@@ -1,0 +1,6 @@
+---
+- name: Windows playbook
+  hosts: windows
+  roles: 
+  - roles/win_ad_install
+

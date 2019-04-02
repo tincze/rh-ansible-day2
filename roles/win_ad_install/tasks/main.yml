@@ -1,0 +1,16 @@
+---
+# tasks file for win_ad_install
+- name: Install AD Services
+  win_feature:
+    name: AD-Domain-Services
+    include_management_tools: yes
+    include_sub_features: yes
+    state: present
+  register: result
+- name: Configure AD
+  win_domain:
+    dns_domain_name: "{{ad_domain_name}}" 
+    safe_mode_password: "{{ad_safe_mode_password}}"
+- name: Reboot Host
+  win_reboot:
+    reboot_timeout: 3600

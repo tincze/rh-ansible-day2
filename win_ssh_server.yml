@@ -1,0 +1,5 @@
+---
+- name: Install OpenSSH server
+  hosts: windows
+  roles:
+   - roles/win_service_config
