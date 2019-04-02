@@ -1,0 +1,6 @@
+---
+- name: Create Windows Users and Groups
+  hosts: windows
+  roles:
+  - roles/win_ad_user
+     

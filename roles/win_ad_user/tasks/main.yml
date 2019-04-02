@@ -1,0 +1,10 @@
+---
+# tasks file for win_domain_user
+- name: create windows users
+  win_domain_user:
+   name: "{{ item.name }}" 
+   firstname: "{{ item.firstname }}" 
+   surname: "{{ item.lastname }}" 
+   password: "{{ item.password }}" 
+   group: "{{ item.group }}" 
+  loop: "{{ user_info }}" 

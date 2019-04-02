@@ -1,0 +1,12 @@
+---
+# vars file for win_domain_user
+#james James Jockey redhat@123 james@ad1.${GUID}.example.opentlc.com dev
+#bill Bill Gates redhat@123 bill@ad1.${GUID}.example.opentlc.com dev
+#mickey Mickey Mouse redhat@123 mickey@ad1.${GUID}.example.opentlc.com qa
+#donald Donald Duck redhat@123 donald@ad1.${GUID}.example.opentlc.com qa
+
+user_info:
+ - { name: james, firstname: James, lastname: Jockey, password: redhat@123, email: james@ad1.79f6.example.opentlc.com, group: dev, group_scope: domainlocal }
+ - { name: bill, firstname: Bill, lastname: Gates, password: redhat@123, email: bill@ad1.79f6.example.opentlc.com, group: dev, group_scope: domainlocal}
+ - { name: mickey, firstname: Mickey, lastname: Mouse, password: redhat@123, email: mickey@ad1.79f6.example.opentlc.com, group: qa, group_scope: domainlocal}
+ - { name: donald, firstname: Donald, lastname: Duck, password: redhat@123, email: donald@ad1.79f6.example.opentlc.com, group: qa, group_scope: domainlocal}
